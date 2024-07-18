@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:houzi_package/common/constants.dart';
-import 'package:houzi_package/files/hooks_files/hooks_configurations.dart';
-import 'package:houzi_package/providers/state_providers/locale_provider.dart';
-import 'package:houzi_package/files/configurations/app_configurations.dart';
-import 'package:houzi_package/files/generic_methods/utility_methods.dart';
-import 'package:houzi_package/houzi_main.dart';
-import 'package:houzi_package/l10n/l10n.dart';
-import 'package:houzi_package/models/article.dart';
-import 'package:houzi_package/models/drawer_menu_item.dart';
-import 'package:houzi_package/models/realtor_model.dart';
-import 'package:houzi_package/pages/home_page_screens/home_elegant_related/related_widgets/home_elegant_sliver_app_bar.dart';
-import 'package:houzi_package/pages/home_screen_drawer_menu_pages/all_agents.dart';
-import 'package:houzi_package/pages/home_screen_drawer_menu_pages/settings_page.dart';
-import 'package:houzi_package/pages/home_screen_drawer_menu_pages/user_related/phone_sign_in_widgets/user_get_phone_number.dart';
-import 'package:houzi_package/pages/home_screen_drawer_menu_pages/user_related/user_profile.dart';
-import 'package:houzi_package/pages/map_view.dart';
-import 'package:houzi_package/pages/property_details_related_pages/pd_widgets_listing.dart';
-import 'package:houzi_package/widgets/article_box_widgets/article_box_design.dart';
-import 'package:houzi_package/widgets/explore_by_type_design_widgets/explore_by_type_design.dart';
-import 'package:houzi_package/widgets/generic_settings_row_widget.dart';
-import 'package:houzi_package/pages/home_page_screens/parent_home_related/home_screen_widgets/home_screen_drawer_widgets/home_screen_drawer_widget.dart';
-import 'package:houzi_package/pages/home_page_screens/parent_home_related/home_screen_widgets/home_screen_realtors_related_widgets/home_screen_realtors_list_widget.dart';
-import 'package:houzi_package/pages/home_page_screens/parent_home_related/home_screen_widgets/home_screen_sliver_app_bar_widgets/default_right_bar_widget.dart';
+import 'package:turo_package/common/constants.dart';
+import 'package:turo_package/files/hooks_files/hooks_configurations.dart';
+import 'package:turo_package/providers/state_providers/locale_provider.dart';
+import 'package:turo_package/files/configurations/app_configurations.dart';
+import 'package:turo_package/files/generic_methods/utility_methods.dart';
+import 'package:turo_package/houzi_main.dart';
+import 'package:turo_package/l10n/l10n.dart';
+import 'package:turo_package/models/article.dart';
+import 'package:turo_package/models/drawer_menu_item.dart';
+import 'package:turo_package/models/realtor_model.dart';
+import 'package:turo_package/pages/home_page_screens/home_elegant_related/related_widgets/home_elegant_sliver_app_bar.dart';
+import 'package:turo_package/pages/home_screen_drawer_menu_pages/all_agents.dart';
+import 'package:turo_package/pages/home_screen_drawer_menu_pages/settings_page.dart';
+import 'package:turo_package/pages/home_screen_drawer_menu_pages/user_related/phone_sign_in_widgets/user_get_phone_number.dart';
+import 'package:turo_package/pages/home_screen_drawer_menu_pages/user_related/user_profile.dart';
+import 'package:turo_package/pages/map_view.dart';
+import 'package:turo_package/pages/property_details_related_pages/pd_widgets_listing.dart';
+import 'package:turo_package/widgets/article_box_widgets/article_box_design.dart';
+import 'package:turo_package/widgets/explore_by_type_design_widgets/explore_by_type_design.dart';
+import 'package:turo_package/widgets/generic_settings_row_widget.dart';
+import 'package:turo_package/pages/home_page_screens/parent_home_related/home_screen_widgets/home_screen_drawer_widgets/home_screen_drawer_widget.dart';
+import 'package:turo_package/pages/home_page_screens/parent_home_related/home_screen_widgets/home_screen_realtors_related_widgets/home_screen_realtors_list_widget.dart';
+import 'package:turo_package/pages/home_page_screens/parent_home_related/home_screen_widgets/home_screen_sliver_app_bar_widgets/default_right_bar_widget.dart';
 
 /// This file is deprecated. Use hooks_v2.dart file
 class IconHooks {
@@ -33,6 +33,7 @@ class IconHooks {
     };
     return map;
   }
+
   /// This file is deprecated. Use hooks_v2.dart file
   static getPropertyDetailPageIconsMap() {
     Map<String, dynamic> _iconMap = {
@@ -41,6 +42,7 @@ class IconHooks {
 
     return _iconMap;
   }
+
   /// This file is deprecated. Use hooks_v2.dart file
   static getElegantHomeTermsIconMap() {
     Map<String, dynamic> _iconMap = {
@@ -97,7 +99,8 @@ class CustomItemDesignHooks {
   //provide your own design for property item
   /// This file is deprecated. Use hooks_v2.dart file
   static getPropertyItemHook() {
-    PropertyItemHook propertyItemHook = (BuildContext context, Article article) {
+    PropertyItemHook propertyItemHook =
+        (BuildContext context, Article article) {
       // return Container(
       //   child: Center(child: Text(article.title)),
       // );
@@ -107,6 +110,7 @@ class CustomItemDesignHooks {
 
     return propertyItemHook;
   }
+
   //provide your own design for term item design in the app
   /// This file is deprecated. Use hooks_v2.dart file
   static getTermItemHook() {
@@ -116,6 +120,7 @@ class CustomItemDesignHooks {
 
     return termItemHook;
   }
+
   //provide your own designs for agent item design in the app.
   /// This file is deprecated. Use hooks_v2.dart file
   static getAgentItemHook() {
@@ -159,6 +164,7 @@ class CustomItemDesignHooks {
     };
     return agentItemHook;
   }
+
   //provide your own design for agency item
   /// This file is deprecated. Use hooks_v2.dart file
   static getAgencyItemHook() {
@@ -175,7 +181,8 @@ class CustomWidgetHooks {
   //you can use the provided details in Article (property)
   /// This file is deprecated. Use hooks_v2.dart file
   static getWidgetHook() {
-    PropertyPageWidgetsHook detailsHook = (BuildContext context, Article article, String hook) {
+    PropertyPageWidgetsHook detailsHook =
+        (BuildContext context, Article article, String hook) {
       if (hook == 'article_images') {
         return null;
       } else if (hook == 'article_title') {
@@ -219,6 +226,7 @@ class CustomWidgetHooks {
 
     return detailsHook;
   }
+
   //a sample widget for description in property details page.
   /// This file is deprecated. Use hooks_v2.dart file
   static Widget descriptionWidget(Article article) {
@@ -271,42 +279,42 @@ class CustomLanguageHooks {
       ///  Run flutter pub get command.
       ///
 
-      Map<String,dynamic> yourLanguageMap = {
+      Map<String, dynamic> yourLanguageMap = {
         "languageName": "YOUR-LANGUAGE-NAME", // Specify your language name
-        "languageCode": "YOUR-LANGUAGE-CODE"  // Specify your language code
+        "languageCode": "YOUR-LANGUAGE-CODE" // Specify your language code
       };
 
-      Map<String,dynamic> arabicLanguageMap = {
+      Map<String, dynamic> arabicLanguageMap = {
         "languageName": "Arabic",
         "languageCode": "ar"
       };
 
-      Map<String,dynamic> frenchLanguageMap = {
+      Map<String, dynamic> frenchLanguageMap = {
         "languageName": "French",
         "languageCode": "fr"
       };
 
-      Map<String,dynamic> urduLanguageMap = {
+      Map<String, dynamic> urduLanguageMap = {
         "languageName": "Urdu",
         "languageCode": "ur"
       };
 
-      Map<String,dynamic> russianLanguageMap = {
+      Map<String, dynamic> russianLanguageMap = {
         "languageName": "Russian",
         "languageCode": "ru"
       };
 
-      Map<String,dynamic> amhericLanguageMap = {
+      Map<String, dynamic> amhericLanguageMap = {
         "languageName": "Amheric",
         "languageCode": "am"
       };
 
-      Map<String,dynamic> turkishLanguageMap = {
+      Map<String, dynamic> turkishLanguageMap = {
         "languageName": "Turkish",
         "languageCode": "tr"
       };
 
-      Map<String,dynamic> spanishLanguageMap = {
+      Map<String, dynamic> spanishLanguageMap = {
         "languageName": "Spanish",
         "languageCode": "es"
       };
@@ -319,14 +327,13 @@ class CustomLanguageHooks {
         amhericLanguageMap,
         turkishLanguageMap,
         spanishLanguageMap,
-    ];
+      ];
 
       return languageList;
     };
 
     return languageHook;
   }
-
 }
 
 class DefaultHook {
@@ -339,6 +346,7 @@ class DefaultHook {
 
     return defaultLanguageCodeHook;
   }
+
   /// This file is deprecated. Use hooks_v2.dart file
   static getDefaultHomePageHook() {
     DefaultHomePageHook defaultHomePageHook = () {
@@ -359,22 +367,22 @@ class DefaultHook {
 
     return defaultHomePageHook;
   }
+
   /// This file is deprecated. Use hooks_v2.dart file
   static getDefaultCountryCodeHook() {
     DefaultCountryCodeHook defaultCountryCodeHook = () {
       /// return 2 Letter ISO Code to make it default country code for phone login
-      return "PK";
+      return "TZ";
     };
 
     return defaultCountryCodeHook;
-
   }
 }
 
-class SettingsPageHook{
+class SettingsPageHook {
   /// This file is deprecated. Use hooks_v2.dart file
-  static getSettingsItemHook(){
-    SettingsHook settingsHook = (BuildContext context){
+  static getSettingsItemHook() {
+    SettingsHook settingsHook = (BuildContext context) {
       ///
       ///
       /// For info about adding Setting item visit below link:
@@ -389,13 +397,12 @@ class SettingsPageHook{
 
     return settingsHook;
   }
-
 }
 
-class ProfilePageHook{
+class ProfilePageHook {
   /// This file is deprecated. Use hooks_v2.dart file
-  static getProfileItemHook(){
-    ProfileHook profileHook = (BuildContext context){
+  static getProfileItemHook() {
+    ProfileHook profileHook = (BuildContext context) {
       ///
       ///
       /// For info about adding Profile item visit below link:
@@ -426,7 +433,6 @@ class HomeRightBarButtonWidgetHookClass {
     };
 
     return homeRightBarButtonWidgetHook;
-
   }
 }
 
@@ -437,14 +443,13 @@ class MapViewHooks {
     /// Instance of Article/Property is provided. You can choose whatever the
     /// title you want to set, it can be property title, id, price or anything
     MarkerTitleHook markerTitleHook = (BuildContext context, Article article) {
-
       String markerTitle = article.title!;
-      return markerTitle; // return title here (should be string type) 
+      return markerTitle; // return title here (should be string type)
     };
 
     return markerTitleHook;
-
   }
+
   /// This file is deprecated. Use hooks_v2.dart file
   static getMarkerIconHook() {
     /// For info about how to add custom marker go to
@@ -459,7 +464,6 @@ class MapViewHooks {
     };
 
     return markerIconHook;
-
   }
 }
 
@@ -470,13 +474,15 @@ class CustomMethodsHook {
   ///
   /// This file is deprecated. Use hooks_v2.dart file
   static getPriceFormatterHook() {
-    PriceFormatterHook priceFormatterHook = (String propertyPrice, String firstPrice) {
+    PriceFormatterHook priceFormatterHook =
+        (String propertyPrice, String firstPrice) {
       // Define your own method here and return the formatted string
       return null;
     };
 
     return priceFormatterHook;
   }
+
   /// This file is deprecated. Use hooks_v2.dart file
   static getCompactPriceFormatterHook() {
     /// If you want to format price on Property Card use this method.

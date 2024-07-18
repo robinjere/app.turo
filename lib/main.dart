@@ -1,5 +1,5 @@
 import 'package:houzi/hooks_v2.dart';
-import 'package:houzi_package/houzi_main.dart' as houzi_package;
+import 'package:turo_package/houzi_main.dart' as turo_package;
 
 Future<void> main() async {
   HooksV2 v2Hooks = HooksV2();
@@ -53,7 +53,7 @@ Future<void> main() async {
   hooksMap["userLoginActionHook"] = v2Hooks.getUserLoginActionHook();
   hooksMap["addPropertyActionHook"] = v2Hooks.getAddPropertyActionHook();
   hooksMap["drawerMenuItemDesignHook"] = v2Hooks.getDrawerMenuItemDesignHook();
-  return houzi_package.main("assets/configurations/configurations.json", hooksMap);
+  return turo_package.main("assets/configurations/configurations.json", hooksMap);
 }
 
 

@@ -1,14 +1,11 @@
 name: houzi
 description: Real estate app
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+4
 
-
 environment:
-  sdk: '>=3.2.6 <4.0.0'
-
-#  sdk: ">=2.18.2 <3.0.0"
+  sdk: ">=3.2.6 <4.0.0"
 
 dependencies:
   flutter:
@@ -18,10 +15,9 @@ dependencies:
 
   flutter_localizations:
     sdk: flutter
-  houzi_package:
-    path: packages/houzi_package
+  turo_package:
+    path: packages/turo_package
 
-  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -36,7 +32,6 @@ flutter_icons:
   ios: true
   image_path: "assets/icon/icon.png"
   remove_alpha_ios: true
-
 
 flutter:
   # The following line ensures that the Material Icons font is
@@ -75,7 +70,6 @@ flutter:
     - assets/localization/fa_localization.json
     - assets/configurations/configurations.json
 
-
   fonts:
     - family: Cairo
       fonts:
@@ -103,4 +97,3 @@ flutter:
       fonts:
         - asset: fonts/Qwitcher_Grypen/QwitcherGrypen-Bold.ttf
         - asset: fonts/Qwitcher_Grypen/QwitcherGrypen-Regular.ttf
-

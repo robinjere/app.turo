@@ -1,51 +1,50 @@
 import 'package:flutter/material.dart';
-import 'package:houzi_package/blocs/property_bloc.dart';
-import 'package:houzi_package/common/constants.dart';
-import 'package:houzi_package/files/hooks_files/hooks_configurations.dart';
-import 'package:houzi_package/models/map_marker_data.dart';
-import 'package:houzi_package/pages/home_page_screens/parent_home_related/home_screen_widgets/home_screen_properties_related_widgets/latest_featured_properties_widget/properties_carousel_list_widget.dart';
-import 'package:houzi_package/providers/state_providers/locale_provider.dart';
-import 'package:houzi_package/files/app_preferences/app_preferences.dart';
-import 'package:houzi_package/files/configurations/app_configurations.dart';
-import 'package:houzi_package/files/generic_methods/utility_methods.dart';
-import 'package:houzi_package/files/hive_storage_files/hive_storage_manager.dart';
-import 'package:houzi_package/houzi_main.dart';
-import 'package:houzi_package/files/hooks_files/hooks_v2_interface.dart';
-import 'package:houzi_package/l10n/l10n.dart';
-import 'package:houzi_package/models/article.dart';
-import 'package:houzi_package/models/drawer_menu_item.dart';
-import 'package:houzi_package/models/realtor_model.dart';
-import 'package:houzi_package/pages/crm_pages/crm_activities/activities_from_board.dart';
-import 'package:houzi_package/pages/crm_pages/crm_deals/deals_from_board.dart';
-import 'package:houzi_package/pages/crm_pages/crm_inquiry/inquiries_from_board.dart';
-import 'package:houzi_package/pages/crm_pages/crm_leads/leads_from_board.dart';
-import 'package:houzi_package/pages/home_page_screens/home_elegant_related/related_widgets/home_elegant_sliver_app_bar.dart';
-import 'package:houzi_package/pages/home_page_screens/parent_home_related/home_screen_widgets/home_screen_drawer_widgets/home_screen_drawer_widget.dart';
-import 'package:houzi_package/pages/home_page_screens/parent_home_related/home_screen_widgets/home_screen_realtors_related_widgets/home_screen_realtors_list_widget.dart';
-import 'package:houzi_package/pages/home_page_screens/parent_home_related/home_screen_widgets/home_screen_sliver_app_bar_widgets/default_right_bar_widget.dart';
-import 'package:houzi_package/pages/home_screen_drawer_menu_pages/all_agents.dart';
-import 'package:houzi_package/pages/home_screen_drawer_menu_pages/settings_page.dart';
-import 'package:houzi_package/pages/home_screen_drawer_menu_pages/user_related/phone_sign_in_widgets/user_get_phone_number.dart';
-import 'package:houzi_package/pages/home_screen_drawer_menu_pages/user_related/user_profile.dart';
-import 'package:houzi_package/pages/map_view.dart';
+import 'package:turo_package/blocs/property_bloc.dart';
+import 'package:turo_package/common/constants.dart';
+import 'package:turo_package/files/hooks_files/hooks_configurations.dart';
+import 'package:turo_package/models/map_marker_data.dart';
+import 'package:turo_package/pages/home_page_screens/parent_home_related/home_screen_widgets/home_screen_properties_related_widgets/latest_featured_properties_widget/properties_carousel_list_widget.dart';
+import 'package:turo_package/providers/state_providers/locale_provider.dart';
+import 'package:turo_package/files/app_preferences/app_preferences.dart';
+import 'package:turo_package/files/configurations/app_configurations.dart';
+import 'package:turo_package/files/generic_methods/utility_methods.dart';
+import 'package:turo_package/files/hive_storage_files/hive_storage_manager.dart';
+import 'package:turo_package/houzi_main.dart';
+import 'package:turo_package/files/hooks_files/hooks_v2_interface.dart';
+import 'package:turo_package/l10n/l10n.dart';
+import 'package:turo_package/models/article.dart';
+import 'package:turo_package/models/drawer_menu_item.dart';
+import 'package:turo_package/models/realtor_model.dart';
+import 'package:turo_package/pages/crm_pages/crm_activities/activities_from_board.dart';
+import 'package:turo_package/pages/crm_pages/crm_deals/deals_from_board.dart';
+import 'package:turo_package/pages/crm_pages/crm_inquiry/inquiries_from_board.dart';
+import 'package:turo_package/pages/crm_pages/crm_leads/leads_from_board.dart';
+import 'package:turo_package/pages/home_page_screens/home_elegant_related/related_widgets/home_elegant_sliver_app_bar.dart';
+import 'package:turo_package/pages/home_page_screens/parent_home_related/home_screen_widgets/home_screen_drawer_widgets/home_screen_drawer_widget.dart';
+import 'package:turo_package/pages/home_page_screens/parent_home_related/home_screen_widgets/home_screen_realtors_related_widgets/home_screen_realtors_list_widget.dart';
+import 'package:turo_package/pages/home_page_screens/parent_home_related/home_screen_widgets/home_screen_sliver_app_bar_widgets/default_right_bar_widget.dart';
+import 'package:turo_package/pages/home_screen_drawer_menu_pages/all_agents.dart';
+import 'package:turo_package/pages/home_screen_drawer_menu_pages/settings_page.dart';
+import 'package:turo_package/pages/home_screen_drawer_menu_pages/user_related/phone_sign_in_widgets/user_get_phone_number.dart';
+import 'package:turo_package/pages/home_screen_drawer_menu_pages/user_related/user_profile.dart';
+import 'package:turo_package/pages/map_view.dart';
 
-import 'package:houzi_package/pages/property_details_related_pages/pd_widgets_listing.dart';
-import 'package:houzi_package/widgets/article_box_widgets/article_box_design.dart';
-import 'package:houzi_package/widgets/explore_by_type_design_widgets/explore_by_type_design.dart';
-import 'package:houzi_package/widgets/filter_page_widgets/term_picker_related/term_picker.dart';
-import 'package:houzi_package/widgets/generic_text_field_widgets/text_field_widget.dart';
+import 'package:turo_package/pages/property_details_related_pages/pd_widgets_listing.dart';
+import 'package:turo_package/widgets/article_box_widgets/article_box_design.dart';
+import 'package:turo_package/widgets/explore_by_type_design_widgets/explore_by_type_design.dart';
+import 'package:turo_package/widgets/filter_page_widgets/term_picker_related/term_picker.dart';
+import 'package:turo_package/widgets/generic_text_field_widgets/text_field_widget.dart';
 
-import 'package:houzi_package/pages/property_details_related_pages/bottom_buttons_action_bar.dart';
-import 'package:houzi_package/pages/property_details_related_pages/pd_widgets_listing.dart';
-import 'package:houzi_package/widgets/article_box_widgets/article_box_design.dart';
-import 'package:houzi_package/widgets/custom_segment_widget.dart';
-import 'package:houzi_package/widgets/explore_by_type_design_widgets/explore_by_type_design.dart';
-import 'package:houzi_package/widgets/generic_text_field_widgets/text_field_widget.dart';
-import 'package:houzi_package/widgets/generic_text_widget.dart';
+import 'package:turo_package/pages/property_details_related_pages/bottom_buttons_action_bar.dart';
+import 'package:turo_package/pages/property_details_related_pages/pd_widgets_listing.dart';
+import 'package:turo_package/widgets/article_box_widgets/article_box_design.dart';
+import 'package:turo_package/widgets/custom_segment_widget.dart';
+import 'package:turo_package/widgets/explore_by_type_design_widgets/explore_by_type_design.dart';
+import 'package:turo_package/widgets/generic_text_field_widgets/text_field_widget.dart';
+import 'package:turo_package/widgets/generic_text_widget.dart';
 import 'package:material_segmented_control/material_segmented_control.dart';
 
-class HooksV2 implements HooksV2Interface{
-
+class HooksV2 implements HooksV2Interface {
   @override
   Map<String, dynamic> getHeaderMap() {
     Map<String, dynamic> map = {
@@ -88,17 +87,19 @@ class HooksV2 implements HooksV2Interface{
   @override
   PropertyItemHeightHook getPropertyItemHeightHook() {
     PropertyItemHeightHook propertyItemHeightHook = (String designName) {
-
       return null;
     };
     return propertyItemHeightHook;
   }
+
 //designName
   @override
   PropertyItemHookV2 getPropertyItemHookV2() {
-    PropertyItemHookV2 propertyItemHookV2 =
-        ({required article, required designName, required heroId, required onTap}) {
-
+    PropertyItemHookV2 propertyItemHookV2 = (
+        {required article,
+        required designName,
+        required heroId,
+        required onTap}) {
       return null;
     };
 
@@ -108,14 +109,13 @@ class HooksV2 implements HooksV2Interface{
   /// Deprecated Method, use getPropertyItemHookV2() instead
   @override
   PropertyItemHook getPropertyItemHook() {
-    PropertyItemHook propertyItemHook = (BuildContext context, Article article) {
-
+    PropertyItemHook propertyItemHook =
+        (BuildContext context, Article article) {
       return null;
     };
 
     return propertyItemHook;
   }
-
 
   @override
   TermItemHook getTermItemHook() {
@@ -201,7 +201,7 @@ class HooksV2 implements HooksV2Interface{
         return null;
       } else if (hook == 'article_description') {
         return null;
-      }else if (hook == 'article_attachments') {
+      } else if (hook == 'article_attachments') {
         return null;
       } else if (hook == 'article_address_info') {
         return null;
@@ -230,7 +230,6 @@ class HooksV2 implements HooksV2Interface{
       } else if (hook == 'whatsapp_button') {
         return null;
       }
-
 
       /// Copy and Paste the sample code provide below.
       ///
@@ -270,62 +269,62 @@ class HooksV2 implements HooksV2Interface{
       ///  Run flutter pub get command.
       ///
 
-      Map<String,dynamic> yourLanguageMap = {
+      Map<String, dynamic> yourLanguageMap = {
         "languageName": "YOUR-LANGUAGE-NAME", // Specify your language name
-        "languageCode": "YOUR-LANGUAGE-CODE"  // Specify your language code
+        "languageCode": "YOUR-LANGUAGE-CODE" // Specify your language code
       };
 
-      Map<String,dynamic> arabicLanguageMap = {
+      Map<String, dynamic> arabicLanguageMap = {
         "languageName": "Arabic",
         "languageCode": "ar"
       };
 
-      Map<String,dynamic> englishLanguageMap = {
+      Map<String, dynamic> englishLanguageMap = {
         "languageName": "English",
         "languageCode": "en"
       };
 
-      Map<String,dynamic> frenchLanguageMap = {
+      Map<String, dynamic> frenchLanguageMap = {
         "languageName": "French",
         "languageCode": "fr"
       };
 
-      Map<String,dynamic> urduLanguageMap = {
+      Map<String, dynamic> urduLanguageMap = {
         "languageName": "Urdu",
         "languageCode": "ur"
       };
 
-      Map<String,dynamic> russianLanguageMap = {
+      Map<String, dynamic> russianLanguageMap = {
         "languageName": "Russian",
         "languageCode": "ru"
       };
 
-      Map<String,dynamic> amhericLanguageMap = {
+      Map<String, dynamic> amhericLanguageMap = {
         "languageName": "Amheric",
         "languageCode": "am"
       };
 
-      Map<String,dynamic> turkishLanguageMap = {
+      Map<String, dynamic> turkishLanguageMap = {
         "languageName": "Turkish",
         "languageCode": "tr"
       };
 
-      Map<String,dynamic> spanishLanguageMap = {
+      Map<String, dynamic> spanishLanguageMap = {
         "languageName": "Spanish",
         "languageCode": "es"
       };
 
-      Map<String,dynamic> romanianLanguageMap = {
+      Map<String, dynamic> romanianLanguageMap = {
         "languageName": "Romanian",
         "languageCode": "ro"
       };
 
-      Map<String,dynamic> brazilianLanguageMap = {
+      Map<String, dynamic> brazilianLanguageMap = {
         "languageName": "Brazilian",
         "languageCode": "pt"
       };
 
-      Map<String,dynamic> persianLanguageMap = {
+      Map<String, dynamic> persianLanguageMap = {
         "languageName": "Persian",
         "languageCode": "fa"
       };
@@ -385,7 +384,7 @@ class HooksV2 implements HooksV2Interface{
   DefaultCountryCodeHook getDefaultCountryCodeHook() {
     DefaultCountryCodeHook defaultCountryCodeHook = () {
       /// return 2 Letter ISO Code to make it default country code for phone login
-      return "PK";
+      return "TZ";
     };
 
     return defaultCountryCodeHook;
@@ -393,7 +392,7 @@ class HooksV2 implements HooksV2Interface{
 
   @override
   SettingsHook getSettingsItemHook() {
-    SettingsHook settingsHook = (BuildContext context){
+    SettingsHook settingsHook = (BuildContext context) {
       ///
       ///
       /// For info about adding Setting item visit below link:
@@ -411,7 +410,7 @@ class HooksV2 implements HooksV2Interface{
 
   @override
   ProfileHook getProfileItemHook() {
-    ProfileHook profileHook = (BuildContext context){
+    ProfileHook profileHook = (BuildContext context) {
       ///
       ///
       /// For info about adding Profile item visit below link:
@@ -427,7 +426,8 @@ class HooksV2 implements HooksV2Interface{
 
   @override
   HomeRightBarButtonWidgetHook getHomeRightBarButtonWidgetHook() {
-    HomeRightBarButtonWidgetHook homeRightBarButtonWidgetHook = (BuildContext context) {
+    HomeRightBarButtonWidgetHook homeRightBarButtonWidgetHook =
+        (BuildContext context) {
       ///
       ///
       /// For info about customizing Home Right Bar Button Id Widget visit below link:
@@ -485,8 +485,7 @@ class HooksV2 implements HooksV2Interface{
       MapMarkerData markerData = MapMarkerData(
           text: article.getCompactPriceForMap(),
           backgroundColor: Colors.red,
-          textColor: Colors.white
-      );
+          textColor: Colors.white);
       return markerData;
       //return null; //if you don't want to show custom map pin, and want to show default GoogleMaps map pin.
     };
@@ -496,7 +495,8 @@ class HooksV2 implements HooksV2Interface{
 
   @override
   PriceFormatterHook getPriceFormatterHook() {
-    PriceFormatterHook priceFormatterHook = (String propertyPrice, String firstPrice) {
+    PriceFormatterHook priceFormatterHook =
+        (String propertyPrice, String firstPrice) {
       // Define your own method here and return the formatted string
       return null;
     };
@@ -513,7 +513,6 @@ class HooksV2 implements HooksV2Interface{
     CompactPriceFormatterHook compactPriceFormatterHook = (String inputPrice) {
       // Define your own method here and return the formatted string
 
-
       // return UtilityMethods.priceFormatter(inputPrice,"");
       return null;
     };
@@ -525,13 +524,13 @@ class HooksV2 implements HooksV2Interface{
   TextFormFieldCustomizationHook getTextFormFieldCustomizationHook() {
     TextFormFieldCustomizationHook textFormFieldCustomizationHook = () {
       Map<String, dynamic> textFormFieldCustomizationMap = {
-        'labelTextStyle' : null,
-        'hintTextStyle' : null,
-        'additionalHintTextStyle' : null,
-        'backgroundColor' : null,
-        'focusedBorderColor' : null,
-        'hideBorder' : null,
-        'borderRadius' : null,
+        'labelTextStyle': null,
+        'hintTextStyle': null,
+        'additionalHintTextStyle': null,
+        'backgroundColor': null,
+        'focusedBorderColor': null,
+        'hideBorder': null,
+        'borderRadius': null,
       };
 
       return textFormFieldCustomizationMap;
@@ -543,25 +542,24 @@ class HooksV2 implements HooksV2Interface{
   @override
   TextFormFieldWidgetHook getTextFormFieldWidgetHook() {
     TextFormFieldWidgetHook textFormFieldWidgetHook = (
-        context,
-        labelText,
-        hintText,
-        additionalHintText,
-        suffixIcon,
-        initialValue,
-        maxLines,
-        readOnly,
-        obscureText,
-        controller,
-        keyboardType,
-        inputFormatters,
-        validator,
-        onSaved,
-        onChanged,
-        onFieldSubmitted,
-        onTap,
+      context,
+      labelText,
+      hintText,
+      additionalHintText,
+      suffixIcon,
+      initialValue,
+      maxLines,
+      readOnly,
+      obscureText,
+      controller,
+      keyboardType,
+      inputFormatters,
+      validator,
+      onSaved,
+      onChanged,
+      onFieldSubmitted,
+      onTap,
     ) {
-
       Widget? textFormFieldWidget;
       return textFormFieldWidget;
     };
@@ -586,13 +584,12 @@ class HooksV2 implements HooksV2Interface{
   @override
   DrawerHeaderHook getDrawerHeaderHook() {
     DrawerHeaderHook drawerHeaderHook = (
-        BuildContext context,
-        String appName,
-        String appIconPath,
-        String? userProfileName,
-        String? userProfileImageUrl,
+      BuildContext context,
+      String appName,
+      String appIconPath,
+      String? userProfileName,
+      String? userProfileImageUrl,
     ) {
-
       Widget? drawerHeaderWidget;
 
       return drawerHeaderWidget;
@@ -689,8 +686,7 @@ class HooksV2 implements HooksV2Interface{
                 );
               },
             )
-          ]
-      );
+          ]);
 
       List<dynamic> drawerItemList = [];
 
@@ -786,8 +782,8 @@ class HooksV2 implements HooksV2Interface{
       // _bodyWidget = HomeSliverAppBarBodyWidget();
       //
       _bodyHookMap = {
-        "height" : _bodyWidgetHeight,
-        "widget" : _bodyWidget,
+        "height": _bodyWidgetHeight,
+        "widget": _bodyWidget,
       };
       return _bodyHookMap;
     };
@@ -795,7 +791,8 @@ class HooksV2 implements HooksV2Interface{
   }
 
   MembershipPlanHook getMembershipPlanHook() {
-    MembershipPlanHook membershipPlanHook = (BuildContext context, List<dynamic> membershipPackageList) {
+    MembershipPlanHook membershipPlanHook =
+        (BuildContext context, List<dynamic> membershipPackageList) {
       /// To use the provided hook for membership packages, follow the steps below:
       ///
       /// The context parameter is used to build the UI, and the
@@ -839,10 +836,8 @@ class HooksV2 implements HooksV2Interface{
 
   @override
   DrawerWidgetsHook getDrawerWidgetsHook() {
-    DrawerWidgetsHook drawerWidgetsHook = (
-        BuildContext context,
-        String? hookName) {
-
+    DrawerWidgetsHook drawerWidgetsHook =
+        (BuildContext context, String? hookName) {
       /// Copy and Paste the sample code provide below.
       ///
       /// Replace the 'HOOK_NAME' with that specific hookName that you define in
@@ -863,11 +858,8 @@ class HooksV2 implements HooksV2Interface{
 
   @override
   HomeWidgetsHook getHomeWidgetsHook() {
-    HomeWidgetsHook homeWidgetsHook = (
-        BuildContext context,
-        String? hookName,
-        bool isRefreshed) {
-
+    HomeWidgetsHook homeWidgetsHook =
+        (BuildContext context, String? hookName, bool isRefreshed) {
       /// Copy and Paste the sample code provide below.
       ///
       /// Replace the 'HOOK_NAME' with that specific hookName that you define in
@@ -906,17 +898,13 @@ class HooksV2 implements HooksV2Interface{
 
   @override
   PaymentSuccessfulHook getPaymentSuccessfulHook() {
-    PaymentSuccessfulHook hook = (BuildContext context, bool success) {
-
-    };
+    PaymentSuccessfulHook hook = (BuildContext context, bool success) {};
     return hook;
   }
 
   @override
   MembershipPackageUpdatedHook getMembershipPackageUpdatedHook() {
-    MembershipPackageUpdatedHook hook = (BuildContext context, bool updated) {
-
-    };
+    MembershipPackageUpdatedHook hook = (BuildContext context, bool updated) {};
     return hook;
   }
 
@@ -976,10 +964,9 @@ class HooksV2 implements HooksV2Interface{
   @override
   NavbarWidgetsHook getNavbarWidgetsHook() {
     NavbarWidgetsHook navbarWidgetsHook = (
-        BuildContext context,
-        String? hookName,
-        ) {
-
+      BuildContext context,
+      String? hookName,
+    ) {
       /// Copy and Paste the sample code provide below.
       ///
       /// Replace the 'HOOK_NAME' with that specific hookName that you define in
@@ -1000,7 +987,6 @@ class HooksV2 implements HooksV2Interface{
 
   @override
   ClusterMarkerIconHook getCustomizeClusterMarkerIconHook() {
-
     /// If you want to show the Cluster Marker Icon with default settings, return null
     /// else return the customizedClusterMarkerIconHook with your required
     /// customization of Cluster Marker Icon against the respective key/keys.
@@ -1023,7 +1009,8 @@ class HooksV2 implements HooksV2Interface{
 
   @override
   CustomClusterMarkerIconHook getCustomClusterMarkerIconHook() {
-    CustomClusterMarkerIconHook customClusterMarkerIconHook = (BuildContext context, int clusterSize) {
+    CustomClusterMarkerIconHook customClusterMarkerIconHook =
+        (BuildContext context, int clusterSize) {
       /// If you want to set the default Cluster Marker Icon, return null
       /// else return your Custom Cluster Marker Icon
 
@@ -1063,12 +1050,12 @@ class HooksV2 implements HooksV2Interface{
 
   @override
   AddPropertyActionHook? getAddPropertyActionHook() {
-    AddPropertyActionHook addPropertyActionHook = ({
-      required context,
-      required addPropertyNonce,
-      required uploadImagesNonce,
-      required addPropertyDataMap,
-      required defaultAddPropertyFunc}) {
+    AddPropertyActionHook addPropertyActionHook = (
+        {required context,
+        required addPropertyNonce,
+        required uploadImagesNonce,
+        required addPropertyDataMap,
+        required defaultAddPropertyFunc}) {
       // define your action here
     };
 
@@ -1078,8 +1065,11 @@ class HooksV2 implements HooksV2Interface{
 
   @override
   DrawerMenuItemDesignHook? getDrawerMenuItemDesignHook() {
-    DrawerMenuItemDesignHook drawerMenuItemDesignHook = ({
-      required iconData, required label, required onTap, required selectedItem}) {
+    DrawerMenuItemDesignHook drawerMenuItemDesignHook = (
+        {required iconData,
+        required label,
+        required onTap,
+        required selectedItem}) {
       // return your design widget here
       return null;
     };
@@ -1089,13 +1079,13 @@ class HooksV2 implements HooksV2Interface{
 
   @override
   UserLoginActionHook? getUserLoginActionHook() {
-    UserLoginActionHook loginActionHook = ({
-      required context,
-      required formKey,
-      required usernameEmail,
-      required password,
-      required loginNonce,
-      required defaultLoginFunc}) {
+    UserLoginActionHook loginActionHook = (
+        {required context,
+        required formKey,
+        required usernameEmail,
+        required password,
+        required loginNonce,
+        required defaultLoginFunc}) {
       // define your action here
     };
 
