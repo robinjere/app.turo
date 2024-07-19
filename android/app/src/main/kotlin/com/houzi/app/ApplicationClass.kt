@@ -1,4 +1,4 @@
-package com.houzi.app
+package com.turo.app
 
 import io.flutter.app.FlutterApplication
 import android.app.Application

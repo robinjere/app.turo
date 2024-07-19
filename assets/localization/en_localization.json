@@ -183,7 +183,7 @@
   "type": "Type",
   "setting_and_privacy": "Settings & Privacy",
   "demo_configuration": "Demo Configuration",
-  "enter_your_own_wordpress": "Enter your own WordPress website URL to test with this App. (Houzi Mobile API plugin is required)",
+  "enter_your_own_wordpress": "Enter your own WordPress website URL to test with this App. (Turo Mobile API plugin is required)",
   "enter_your_wordpress_url": "Enter WordPress URL",
   "cancel": "Cancel",
   "save": "Save",

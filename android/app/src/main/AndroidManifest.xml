@@ -1,7 +1,7 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.houzi.app">
+    package="com.turo.app">
     <!-- IMPORTANT IMPORTANT. if you change this package, change the folder structure of the kotlin classes
     as well under
     android > app > src > main > kotlin > your > package > name > MainActivity.kt
@@ -47,7 +47,7 @@
 
     <application
         android:name=".ApplicationClass"
-        android:label="Houzi"
+        android:label="Turo"
         android:icon="@mipmap/ic_launcher"
         android:requestLegacyExternalStorage="true"
         android:networkSecurityConfig="@xml/network_security_config"
@@ -131,7 +131,7 @@
             android:value="true" />
 
         <meta-data android:name="com.onesignal.NotificationServiceExtension"
-            android:value="com.houzi.app.NotificationServiceExtension" />
+            android:value="com.turo.app.NotificationServiceExtension" />
 
 
     </application>

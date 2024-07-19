@@ -184,7 +184,7 @@
   "type": "Tür",
   "setting_and_privacy": "Ayarlar ve Gizlilik",
   "demo_configuration": "Demo Yapılandırma",
-  "enter_your_own_wordpress": "Bu Uygulama ile test etmek için kendi WordPress web sitesi URL'nizi girin. (Houzi Mobile API eklentisi gereklidir)",
+  "enter_your_own_wordpress": "Bu Uygulama ile test etmek için kendi WordPress web sitesi URL'nizi girin. (Turo Mobile API eklentisi gereklidir)",
   "enter_your_wordpress_url": "WordPress URL'sini girin",
   "cancel": "İptal",
   "save": "Kaydet",

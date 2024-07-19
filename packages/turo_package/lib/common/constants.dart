@@ -2,7 +2,7 @@ library constants;
 
 import 'dart:core';
 
-String APP_NAME = 'Houzi';
+String APP_NAME = 'Turo';
 
 /// Your wordpress website URLs
 /// Replace the following fields with your website URL
@@ -61,7 +61,7 @@ String IOS_NATIVE_AD_ID = "ca-app-pub-3940256099942544/2247696110";
 String ONE_SIGNAL_APP_ID = "";
 
 /// Provide Service Id here
-const String APPLE_SIGN_ON_CLIENT_ID = "com.houzi.app.signin";
+const String APPLE_SIGN_ON_CLIENT_ID = "com.turo.app.signin";
 
 /// Provide Redirect Uri here
 String APPLE_SIGN_ON_REDIRECT_URI = "https://example-app.com/redirect";
@@ -441,7 +441,7 @@ const String DEMO_URL = 'https://demodomain.com/';
 const bool APP_IS_IN_CLIENT_DEMO_MODE = false;
 
 ///demo version id to match with our online list.
-const int APP_DEMO_ID = 0; //Houzi
+const int APP_DEMO_ID = 0; //Turo
 
 /// Need to fix agent profile 1=> yes, 0=> no
 const int NEED_TO_FIX_PROFILE_PIC = 0;
@@ -866,7 +866,7 @@ const String REALTOR = "realtor";
 const String PROPERTY_CITY = "property_city";
 const String FEATURED_PROPERTY = "fave_featured";
 
-/// Houzi Plug-in Url Related
+/// Turolug-in Url Related
 const String HOUZI_URL_PLUG_IN = "https://github.com/AdilSoomro/houzi-rest-api";
 
 /// Article Box Designs Related
@@ -1618,7 +1618,7 @@ const String PAGE_KEY = "page";
 const String PER_PAGE_KEY = "per_page";
 const int PER_PAGE_VALUE = 16;
 
-/// Houzi Form ELement Types Related
+/// TuroForm ELement Types Related
 const String formTextField = "formTextField";
 const String formStepperField = "formStepperField";
 const String formMultiSelectField = "formMultiSelectField";

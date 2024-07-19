@@ -9,7 +9,7 @@ import 'package:turo_package/files/app_preferences/app_preferences.dart';
 import 'package:turo_package/files/configurations/app_configurations.dart';
 import 'package:turo_package/files/generic_methods/utility_methods.dart';
 import 'package:turo_package/files/hive_storage_files/hive_storage_manager.dart';
-import 'package:turo_package/houzi_main.dart';
+import 'package:turo_package/turo_main.dart';
 import 'package:turo_package/files/hooks_files/hooks_v2_interface.dart';
 import 'package:turo_package/l10n/l10n.dart';
 import 'package:turo_package/models/article.dart';
@@ -48,7 +48,7 @@ class HooksV2 implements HooksV2Interface {
   @override
   Map<String, dynamic> getHeaderMap() {
     Map<String, dynamic> map = {
-      "app-secret": "2#4*dv3@4pK9W3",
+      "app-secret": "d8cbb989-f03f-4aea-bb5f-b623e756d4f4",
       // "secret_key": "",
     };
     return map;
@@ -234,7 +234,7 @@ class HooksV2 implements HooksV2Interface {
       /// Copy and Paste the sample code provide below.
       ///
       /// Replace the 'HOOK_NAME' with that specific hookName that you define in
-      /// json via Houzi Builder Desktop application and replace your
+      /// json via Turouilder Desktop application and replace your
       /// Custom widget with 'WIDGET'.
       ///
       /// You are provided with the Property Article Information as the object
@@ -507,7 +507,7 @@ class HooksV2 implements HooksV2Interface {
   @override
   CompactPriceFormatterHook getCompactPriceFormatterHook() {
     /// If you want to format price on Property Card use this method.
-    /// If you want to use Houzi pre define formatter than return null
+    /// If you want to use Turo pre define formatter than return null
     ///
     ///
     CompactPriceFormatterHook compactPriceFormatterHook = (String inputPrice) {
@@ -841,7 +841,7 @@ class HooksV2 implements HooksV2Interface {
       /// Copy and Paste the sample code provide below.
       ///
       /// Replace the 'HOOK_NAME' with that specific hookName that you define in
-      /// json via Houzi Builder Desktop application and replace your
+      /// json via Turo Builder Desktop application and replace your
       /// Custom widget with 'WIDGET'.
       ///
       ///
@@ -863,7 +863,7 @@ class HooksV2 implements HooksV2Interface {
       /// Copy and Paste the sample code provide below.
       ///
       /// Replace the 'HOOK_NAME' with that specific hookName that you define in
-      /// json via Houzi Builder Desktop application and replace your
+      /// json via Turo Builder Desktop application and replace your
       /// Custom widget with 'WIDGET'.
       ///
       /// Whenever the home is refreshed, 'isRefreshed' will return true, if you
@@ -970,7 +970,7 @@ class HooksV2 implements HooksV2Interface {
       /// Copy and Paste the sample code provide below.
       ///
       /// Replace the 'HOOK_NAME' with that specific hookName that you define in
-      /// json via Houzi Builder Desktop application and replace your
+      /// json via Turo Builder Desktop application and replace your
       /// Custom widget with 'WIDGET'.
       ///
       ///

@@ -14,7 +14,7 @@
 	</array>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.houzi.app.onesignal</string>
+		<string>group.com.turo.app.onesignal</string>
 	</array>
 </dict>
 </plist>

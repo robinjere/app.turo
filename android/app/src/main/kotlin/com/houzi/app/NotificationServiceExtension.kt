@@ -1,4 +1,4 @@
-package com.houzi.app
+package com.turo.app
 
 import com.onesignal.notifications.IActionButton
 import com.onesignal.notifications.IDisplayableMutableNotification

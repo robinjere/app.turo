@@ -185,7 +185,7 @@
   "type": "Type",
   "setting_and_privacy": "Paramètres et confidentialité",
   "demo_configuration": "Configuration de la démo",
-  "enter_your_own_wordpress": "Entrez l'URL de votre propre site WordPress pour le tester avec cette application. (Le plugin Houzi Mobile API est requis)",
+  "enter_your_own_wordpress": "Entrez l'URL de votre propre site WordPress pour le tester avec cette application. (Le plugin Turo Mobile API est requis)",
   "enter_your_wordpress_url": "Entrer l'URL de WordPress",
   "cancel": "Annuler",
   "save": "Enregistrer",

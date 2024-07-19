@@ -4,7 +4,7 @@ import 'package:turo_package/files/hooks_files/hooks_configurations.dart';
 import 'package:turo_package/providers/state_providers/locale_provider.dart';
 import 'package:turo_package/files/configurations/app_configurations.dart';
 import 'package:turo_package/files/generic_methods/utility_methods.dart';
-import 'package:turo_package/houzi_main.dart';
+import 'package:turo_package/turo_main.dart';
 import 'package:turo_package/l10n/l10n.dart';
 import 'package:turo_package/models/article.dart';
 import 'package:turo_package/models/drawer_menu_item.dart';
@@ -469,7 +469,7 @@ class MapViewHooks {
 
 class CustomMethodsHook {
   /// If you want to format price in Property detail page or any other place,
-  /// use this method. If you want to use Houzi pre define formatter than return null
+  /// use this method. If you want to use Turo pre define formatter than return null
   ///
   ///
   /// This file is deprecated. Use hooks_v2.dart file
@@ -486,7 +486,7 @@ class CustomMethodsHook {
   /// This file is deprecated. Use hooks_v2.dart file
   static getCompactPriceFormatterHook() {
     /// If you want to format price on Property Card use this method.
-    /// If you want to use Houzi pre define formatter than return null
+    /// If you want to use Turo pre define formatter than return null
     ///
     ///
     CompactPriceFormatterHook compactPriceFormatterHook = (String inputPrice) {

@@ -32,7 +32,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace "com.houzi.app"
+    namespace "com.turo.app"
     compileSdkVersion 34
 
     sourceSets {
@@ -45,7 +45,7 @@ android {
 
     defaultConfig {
 
-        applicationId "com.houzi.app"
+        applicationId "com.turo.app"
         minSdkVersion 23
         targetSdkVersion 34
         versionCode "1".toInteger()
